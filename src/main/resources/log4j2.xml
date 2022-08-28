@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<configuration status="WARN">
+	<properties>
+		<property name="log-path">./logs</property>
+	</properties>
+	<appenders>
+		<console name="Console-Appender" target="SYSTEM_OUT">
+			<patternlayout>
+				<pattern>
+					%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n
+				</pattern>
+			</patternlayout>
+		</console>
+
+		<rollingfile name="RollingFile-Appender"
+			fileName="${log-path}/rollingfile.log"
+			filePattern="${log-path}/rollingfile-%d{yyyy-MM-dd-hh-mm}.log">
+			<patternlayout>
+				<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} -
+					%msg%n</pattern>
+			</patternlayout>
+			<sizebasedtriggeringpolicy size="30 MB" />
+		</rollingfile>
+	</appenders>
+	<loggers>
+		<logger name="com.xoriant.bankingapplication.aop" level="trace"
+			additivity="false">
+
+			<appenderref ref="RollingFile-Appender" />
+			<appenderref ref="Console-Appender" />
+
+		</logger>
+		<root level="fatal">
+			<appenderref ref="Console-Appender" />
+			<appenderref ref="RollingFile-Appender" />
+		</root>
+	</loggers>
+</configuration>

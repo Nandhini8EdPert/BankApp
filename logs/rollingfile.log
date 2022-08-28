@@ -1,0 +1,12 @@
+2022-03-15 18:37:23.598 [main] INFO  com.xoriant.bankingapplication.aop.MyAspects -
+					Working
+2022-03-15 18:40:16.501 [main] INFO  com.xoriant.bankingapplication.aop.MyAspects -
+					Amount debited!
+2022-03-25 18:26:15.056 [main] INFO  com.xoriant.bankingapplication.aop.MyAspects -
+					Amount debited!
+2022-03-25 19:22:42.748 [main] INFO  com.xoriant.bankingapplication.aop.MyAspects -
+					Amount debited!
+2022-03-25 19:23:07.322 [main] INFO  com.xoriant.bankingapplication.aop.MyAspects -
+					Amount deposited!
+2022-03-28 16:44:18.027 [main] INFO  com.xoriant.bankingapplication.aop.MyAspects -
+					Amount deposited!
